@@ -27,8 +27,7 @@ const App = () => {
                     type="text"
                     onChange={handleChange}
                     value={inputValue}
-                    id="movie-input"
-                ></input>
+                    id="movie-input"/>
                 <button id="button" onClick={handleClick}>
                     Search
                 </button>
