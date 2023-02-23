@@ -12,7 +12,7 @@ const App = () => {
             return element.title;
         }
        })
-       setResult([...array,...results])
+       setResult([...array])
         
     }
 
