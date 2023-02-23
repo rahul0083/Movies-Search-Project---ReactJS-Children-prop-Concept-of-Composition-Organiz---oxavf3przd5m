@@ -4,10 +4,16 @@ import { movies } from "../utils/movieList";
 
 const App = () => {
     const [inputValue, setInputValue] = useState("");
-    const [results, setResult] = useState(null);
+    const [results, setResult] = useState([]);
 
     function handleClick(e) {
-       e.setInputValue(e.target.value);
+      let array= movies.filter((element,index)=>{
+        if(element.title===inputValue){
+            return element.title;
+        }
+       })
+       console.log("My array",array);
+       setResult([...array])
         
     }
 
@@ -31,7 +37,7 @@ const App = () => {
             <div id="result">
                 {results &&
                     results.map((movie) => (
-                        <div className="movie">{movie}</div>
+                        <div className="movie">{movie.title}</div>
                     ))}
             </div>
         </div>
