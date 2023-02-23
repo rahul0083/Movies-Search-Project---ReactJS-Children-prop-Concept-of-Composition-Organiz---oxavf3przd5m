@@ -7,11 +7,13 @@ const App = () => {
     const [results, setResult] = useState([]);
 
     function handleClick(e) {
+        e.preventDefault();
       let array= movies.filter((element,index)=>{
         if(element.title.toLowerCase()===inputValue.toLowerCase()){
             return element.title;
         }
        })
+       setInputValue("");
        setResult([...array])
         
     }
