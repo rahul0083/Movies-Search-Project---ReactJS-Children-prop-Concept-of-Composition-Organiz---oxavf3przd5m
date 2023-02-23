@@ -8,7 +8,7 @@ const App = () => {
 
     function handleClick(e) {
       let array= movies.filter((element,index)=>{
-        if(element.title===inputValue){
+        if(element.title.toLowerCase()===inputValue.toLowerCase()){
             return element.title;
         }
        })
