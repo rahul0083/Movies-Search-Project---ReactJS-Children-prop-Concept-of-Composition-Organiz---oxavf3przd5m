@@ -12,8 +12,7 @@ const App = () => {
             return element.title;
         }
        })
-       console.log("My array",array);
-       setResult([...array])
+       setResult([...array,...results])
         
     }
 
@@ -36,8 +35,8 @@ const App = () => {
             </form>
             <div id="result">
                 {results &&
-                    results.map((movie) => (
-                        <div className="movie">{movie.title}</div>
+                    results.map((movie,index) => (
+                        <div key={index} className="movie">{movie.title}</div>
                     ))}
             </div>
         </div>
